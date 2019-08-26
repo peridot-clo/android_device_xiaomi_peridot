@@ -16,6 +16,17 @@ prebuilt_etc {
     vendor: true,
 }
 
+cc_library_static {
+    name: "libinit_peridot",
+    srcs: ["init_peridot.cpp"],
+    shared_libs: ["libbase"],
+    recovery_available: true,
+    include_dirs: [
+        "system/core/init",
+        "system/libbase/include"
+    ]
+}
+
 prebuilt_etc {
     name: "init.peridot.rc",
     src: "init.peridot.rc",

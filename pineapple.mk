@@ -70,7 +70,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    charger_fw_fstab.qti \
+    fstab.qcom \
+    init.target.rc \
+    ueventd-odm.rc
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \

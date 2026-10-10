@@ -4,7 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# PATH
 DEVICE_PATH := device/xiaomi/peridot
+HARDWARE_PATH := hardware/xiaomi
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 
 # Architecture
 TARGET_ARCH := arm64
@@ -164,3 +167,19 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_SYSTEM_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml \
+    $(HARDWARE_PATH)/vintf/xiaomi_framework_compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_MANIFEST_FILE := \
+    $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
+
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/configs/vintf/manifest_vendor.xml \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml
+
+ODM_MANIFEST_FILES += \
+    $(DEVICE_PATH)/configs/vintf/manifest_odm.xml

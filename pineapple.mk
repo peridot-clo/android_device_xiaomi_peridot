@@ -72,6 +72,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
+    init.peridot.rc \
     init.target.rc \
     ueventd-odm.rc
 

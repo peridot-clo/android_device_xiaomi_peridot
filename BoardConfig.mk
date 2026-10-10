@@ -104,6 +104,22 @@ $(foreach p, $(call to-upper, $(BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST)), \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))) \
 )
 
+# Properties
+TARGET_ODM_PROP += \
+    $(DEVICE_PATH)/configs/properties/odm.prop
+
+TARGET_PRODUCT_PROP += \
+    $(DEVICE_PATH)/configs/properties/product.prop
+
+TARGET_SYSTEM_PROP += \
+    $(DEVICE_PATH)/configs/properties/system.prop
+
+TARGET_SYSTEM_EXT_PROP += \
+    $(DEVICE_PATH)/configs/properties/system_ext.prop
+
+TARGET_VENDOR_PROP += \
+    $(DEVICE_PATH)/configs/properties/vendor.prop
+
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true

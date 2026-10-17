@@ -239,6 +239,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # QCRIL
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
+
 PRODUCT_PACKAGES += \
     qcrilNrDb_vendor
 

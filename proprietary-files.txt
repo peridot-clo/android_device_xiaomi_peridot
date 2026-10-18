@@ -2231,7 +2231,7 @@ odm/firmware/aw8697_haptic.bin
 odm/firmware/aw8697_rtp_1.bin
 
 # WiFi
-vendor/bin/cnss-daemon;MODULE_SUFFIX=_xiaomi;DISABLE_CHECKELF;OVERRIDES=cnss-daemon
+vendor/bin/cnss-daemon;MAKE_COPY_RULE_ONLY
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/lib64/libcert_parse.wpa_s.so

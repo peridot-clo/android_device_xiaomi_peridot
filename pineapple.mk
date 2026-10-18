@@ -124,6 +124,13 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd-odm.rc
 
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.xiaomi
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
+
 # Keymint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hal_uuid_map.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_peridot.xml

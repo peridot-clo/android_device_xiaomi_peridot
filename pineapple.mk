@@ -237,6 +237,14 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# QCRIL
+PRODUCT_PACKAGES += \
+    qcrilNrDb_vendor
+
+PRODUCT_PACKAGES += \
+    vendor_modem_firmware_mountpoint
+
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \

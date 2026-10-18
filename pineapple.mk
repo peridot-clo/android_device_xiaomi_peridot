@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd-odm.rc
 
+# Keymint
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hal_uuid_map.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_peridot.xml
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

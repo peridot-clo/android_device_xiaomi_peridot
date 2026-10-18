@@ -66,6 +66,12 @@ PRODUCT_COPY_FILES += \
 # AVB
 BOARD_AVB_ENABLE := true
 
+# Display
+$(foreach display_id, 4630947195234848131 4630947033261136259 4630946545580055171, \
+    $(eval PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
+    ))
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

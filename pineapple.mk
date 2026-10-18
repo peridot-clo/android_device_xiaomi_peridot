@@ -169,6 +169,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Network
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 

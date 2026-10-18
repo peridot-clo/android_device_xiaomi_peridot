@@ -59,9 +59,6 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_peridot
 TARGET_RECOVERY_DEVICE_MODULES := libinit_peridot
 
 # Kernel
-KERNEL_PREBUILT_DIR := $(DEVICE_PATH)-kernel
-KERNEL_MODULES_OUT := $(KERNEL_PREBUILT_DIR)/vendor_dlkm
-
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(AOSPA_VERSION) \

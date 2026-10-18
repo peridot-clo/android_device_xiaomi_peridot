@@ -1,0 +1,8 @@
+# Real packaged IOP HIDL provider; preserve its disabled init state.
+type vendor_hal_iop_default, domain;
+type vendor_hal_iop_default_exec, exec_type, vendor_file_type, file_type;
+type vendor_hal_iop_hwservice, hwservice_manager_type, protected_hwservice;
+init_daemon_domain(vendor_hal_iop_default)
+hwbinder_use(vendor_hal_iop_default)
+add_hwservice(vendor_hal_iop_default, vendor_hal_iop_hwservice)
+get_prop(vendor_hal_iop_default, vendor_iop_prop)

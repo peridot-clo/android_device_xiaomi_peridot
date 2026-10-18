@@ -1,0 +1,4 @@
+binder_call(system_server, vendor_hal_displayfeature_xiaomi_default)
+
+# Match the framework's current SnapdragonServices client role.
+hal_client_domain(system_server, vendor_hal_snapx_service_qti)

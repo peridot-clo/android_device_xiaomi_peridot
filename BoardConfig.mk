@@ -70,10 +70,6 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=peridot:$(AOSPA_VERSION) \
     mtdoops.fingerprint=peridot:$(AOSPA_VERSION)
 
-# TODO: Delete after confirming that the sepolicy rules allow switching to Enforcing.
-BOARD_KERNEL_CMDLINE += \
-    androidboot.selinux=permissive
-
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.hypervisor.protected_vm.supported=0 \
@@ -136,6 +132,10 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 104
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2026-02-01

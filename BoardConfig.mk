@@ -65,6 +65,16 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_peridot
 TARGET_RECOVERY_DEVICE_MODULES := libinit_peridot
 
 # Kernel
+KERNEL_PREBUILT_DIR := device/qcom/pineapple-kernel
+KERNEL_MODULES_OUT := $(KERNEL_PREBUILT_DIR)/vendor_dlkm
+
+BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(KERNEL_MODULES_OUT)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(file < $(KERNEL_MODULES_OUT)/modules.load))
+
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
+BOARD_DO_NOT_STRIP_VENDOR_RAMDISK_MODULES := true
+BOARD_DO_NOT_STRIP_RECOVERY_MODULES := true
+
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(AOSPA_VERSION) \

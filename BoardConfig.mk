@@ -180,3 +180,7 @@ DEVICE_MANIFEST_FILE += \
 
 ODM_MANIFEST_FILES += \
     $(DEVICE_PATH)/configs/vintf/manifest_odm.xml
+
+# WLAN
+TARGET_WLAN_CHIP := qca6750
+include device/qcom/wlan/pineapple/BoardConfigWlan.mk

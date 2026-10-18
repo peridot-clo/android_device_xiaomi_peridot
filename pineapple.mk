@@ -194,6 +194,23 @@ PRODUCT_COPY_FILES += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    wfd \
+    wlan
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -220,6 +237,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservice \
+    vndservicemanager
+
 # Vibrator
 $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
@@ -232,3 +254,6 @@ PRODUCT_PACKAGES += \
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
+# Vendor
+$(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)

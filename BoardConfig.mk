@@ -131,6 +131,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 104
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Vendor security patch
+VENDOR_SECURITY_PATCH := 2026-02-01
+
 # UFS
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
@@ -184,3 +187,6 @@ ODM_MANIFEST_FILES += \
 # WLAN
 TARGET_WLAN_CHIP := qca6750
 include device/qcom/wlan/pineapple/BoardConfigWlan.mk
+
+# Include the proprietary files BoardConfig.
+include vendor/xiaomi/peridot/BoardConfigVendor.mk

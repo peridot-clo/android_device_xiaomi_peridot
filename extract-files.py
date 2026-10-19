@@ -141,6 +141,9 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
+        .remove_needed('android.hardware.graphics.composer3-V2-ndk.so'),
     'odm/lib64/anc.hal.so': blob_fixup()
         .add_needed('libion.so'),
     'system_ext/etc/init/qspa_system.rc': blob_fixup()

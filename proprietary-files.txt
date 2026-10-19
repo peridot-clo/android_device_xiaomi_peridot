@@ -1597,11 +1597,9 @@ vendor/lib64/libmilut.so
 odm/lib64/libmiXmlParser.so
 odm/lib64/libmi-stc-HW-modulate.so
 odm/lib64/libeyecare.so
-vendor/lib64/libmisr.so
 vendor/lib64/libqcodec2_cvpfilter.so
 vendor/lib64/libqcodec2_imgtxrfilter.so
 vendor/lib64/libqcodec2_mocklutfilter.so
-vendor/lib64/libqcodec2_srfilter.so
 vendor/lib64/libqcodec2_streaminteg_filter.so
 
 # Mlipay

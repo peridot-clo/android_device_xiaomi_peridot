@@ -72,7 +72,6 @@
         // list of codec plugin libraries to be loaded into codec registry
         "QC2CodecPlugins": [
             "libqc2vppfilter.so",
-            "libqcodec2_srfilter.so",
             "libqcodec2_imgtxrfilter.so"
         ],
 
@@ -82,11 +81,7 @@
             "libqcodec2_streaminteg_filter.so"
         ],
 
-        "QC2PostProcessingFilters": {
-            "vppFilter": [
-                "c2.mi.filter.sr"
-            ]
-        },
+        "QC2PostProcessingFilters": {},
         //
         // Put below optional codecs under "OptionalCodecs" to enable it
         // "c2.qti.dv.decoder",

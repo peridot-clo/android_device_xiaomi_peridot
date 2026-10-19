@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from peridot OS3.0.305.0.WNPCNXM - peridot-ota_full-OS3.0.305.0.WNPCNXM
+# Unless a section specifies another source, blobs are extracted from peridot OS3.0.305.0.WNPCNXM - peridot-ota_full-OS3.0.305.0.WNPCNXM
 
 # ACDB
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb
@@ -9,11 +9,12 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_3.4_enpuv4.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__11.0.1.6_1.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_3.4_enpuv4.pmd
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libvmmem.so
+# ADSP - From AU_LINUX_ANDROID_LA.VENDOR.14.3.0.R1.00.00.00.000.234
+vendor/bin/adsprpcd|f948bd8f414f89c6ff41806e03bd5c91df6fa809
+vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc|8f0eb84d3eb5fc0f683ef7b975b75044d56f513e
+vendor/lib64/libadsp_default_listener.so|d0637576099296499906d61c114185664098524c
+vendor/lib64/libadsprpc.so|34b27c7dafa60c0b728a45b1fb32ea3e5585d7a3
+vendor/lib64/libvmmem.so|44a8f70c5118f18367992642d65ca6d5c0bb5af5
 
 # ADSP modules
 odm/lib/rfsa/adsp/capi_elus_rx.so
@@ -116,7 +117,6 @@ vendor/lib64/libVoiceSdk.so
 vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
-vendor/lib64/libadsprpc.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libar-gsl.so
@@ -180,13 +180,13 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 
-# CDSP
-vendor/bin/cdsprpcd
-vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+# CDSP - From AU_LINUX_ANDROID_LA.VENDOR.14.3.0.R1.00.00.00.000.234
+vendor/bin/cdsprpcd|cf1c3cac8690c0743891f42b4cd93b634eec019d
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib64/libcdsp_default_listener.so|69c81a381a1146084cec7529aece9b06ae59f35d
+vendor/lib64/libcdsprpc.so|99e6b94e3a10d39f5286eef5f68515907bc44d8a
+vendor/lib64/libmdsprpc.so|98439e53b21b83ced032fb940d28252004b494b6
+vendor/lib64/libsdsprpc.so|2126088ae84c6ccbaf332bcca9b89ca693cccfd8
 
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
@@ -1995,6 +1995,11 @@ vendor/lib64/libGPQeSE.so
 vendor/lib64/libstnfc-streset.so
 vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so
 
+# Sensors - From AU_LINUX_ANDROID_LA.VENDOR.14.3.0.R1.00.00.00.000.234
+vendor/bin/sscrpcd|d14a1338a025e5105033bed210eafb0de803bb4e
+vendor/etc/init/vendor.sensors.sscrpcd.rc|df52901f1ad0fbc97d6070e28896a6be40154814
+vendor/lib64/libssc_default_listener.so|8954ff38d5fbaa239e7bf5030ad823290b5a12e9
+
 # Sensors
 odm/etc/sensors/config/ak7323.json
 odm/etc/sensors/config/chre_dynamic_sensors.json
@@ -2072,12 +2077,10 @@ odm/etc/sensors/config/sns_tilt_to_wake.json
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
-vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.ins.rc
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
-vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/sensor_diag.cfg
 vendor/etc/sensors/config/chre_dynamic_sensors.json
 vendor/etc/sensors/sns_reg_config
@@ -2094,7 +2097,6 @@ vendor/lib64/libsnsapi-full.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
-vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.qsh.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 

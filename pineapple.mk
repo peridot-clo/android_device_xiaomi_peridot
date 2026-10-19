@@ -97,8 +97,12 @@ $(foreach display_id, 4630947195234848131 4630947033261136259 463094654558005517
     ))
 
 # DRM
+PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
+    $(LOCAL_PATH)/configs/linker/vendor-linker.config.json
+
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
+
 
 # Fastbootd
 PRODUCT_PACKAGES += \

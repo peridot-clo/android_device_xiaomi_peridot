@@ -197,9 +197,6 @@ DEVICE_MANIFEST_FILE += \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml
 
-ODM_MANIFEST_FILES += \
-    $(DEVICE_PATH)/configs/vintf/manifest_odm.xml
-
 # WLAN
 TARGET_WLAN_CHIP := qca6750
 include device/qcom/wlan/pineapple/BoardConfigWlan.mk

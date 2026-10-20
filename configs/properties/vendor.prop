@@ -86,6 +86,7 @@ persist.sys.fuse.passthrough.enable=true
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
+vendor.display.enable_cit_cwb_notifier=true
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
 debug.egl.hw=0
 debug.sf.auto_latch_unsignaled=0

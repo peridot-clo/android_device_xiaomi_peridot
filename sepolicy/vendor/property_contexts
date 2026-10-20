@@ -190,3 +190,6 @@ vendor.anc.fingerprint.package.version u:object_r:vendor_fp_info_prop:s0 exact s
 persist.vendor.oem.cta_code u:object_r:vendor_radio_prop:s0 exact string
 persist.vendor.nfc.nxp.lx_debug_mask u:object_r:vendor_nfc_debug_prop:s0 exact string
 vendor.sys.thermal.bcl.boot_completed u:object_r:vendor_thermal_normal_prop:s0 exact string
+
+# Device CWB notifier for under-display ambient-light compensation.
+vendor.display.enable_cit_cwb_notifier u:object_r:vendor_display_prop:s0 exact bool

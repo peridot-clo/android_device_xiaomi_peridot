@@ -1,0 +1,22 @@
+//
+// Copyright (C) 2026 Project Mia
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libxiaomi_cit_cwb_notifier",
+    vendor: true,
+    srcs: ["CitCwbNotifier.cpp"],
+    shared_libs: [
+        "libbinder_ndk",
+        "libbase",
+        "liblog",
+    ],
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fvisibility=hidden",
+    ],
+}

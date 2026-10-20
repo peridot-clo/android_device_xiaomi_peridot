@@ -218,6 +218,10 @@ class PeridotUdfpsHandler : public UdfpsHandler {
 
     void onAuthenticationFailed() { onFingerUp(); }
 
+    // Enrollment completion, cancellation and session teardown must release
+    // local HBM even when the framework no longer forwards a final pointer-up.
+    void cancel() override { onFingerUp(); }
+
   private:
     fingerprint_device_t* mDevice;
     android::base::unique_fd disp_fd_;

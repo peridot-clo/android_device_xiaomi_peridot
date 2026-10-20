@@ -271,6 +271,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    capi_elus_rx.so_symlink \
+    capi_elus_tx.so_symlink \
+
+PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
     sensor-notifier
 

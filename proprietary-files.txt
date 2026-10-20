@@ -17,8 +17,8 @@ vendor/lib64/libadsprpc.so|34b27c7dafa60c0b728a45b1fb32ea3e5585d7a3
 vendor/lib64/libvmmem.so|44a8f70c5118f18367992642d65ca6d5c0bb5af5
 
 # ADSP modules
-odm/lib/rfsa/adsp/capi_elus_rx.so
-odm/lib/rfsa/adsp/capi_elus_tx.so
+odm/lib/rfsa/adsp/capi_elus_rx.so;SYMLINK=vendor/lib/rfsa/adsp/capi_elus_rx.so
+odm/lib/rfsa/adsp/capi_elus_tx.so;SYMLINK=vendor/lib/rfsa/adsp/capi_elus_tx.so
 odm/lib/rfsa/adsp/libCalculator_skel.so;SYMLINK=vendor/lib/rfsa/adsp/libCalculator_skel.so
 odm/lib/rfsa/adsp/libQnnHtpV73.so
 odm/lib/rfsa/adsp/libQnnHtpV73QemuDriver.so

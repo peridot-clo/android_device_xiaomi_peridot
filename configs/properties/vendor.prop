@@ -83,6 +83,7 @@ vendor.gatekeeper.is_security_level_spu=0
 debug.stagefright.c2inputsurface=-1
 
 # Media configs
+ro.mediaserver.64b.enable=true
 ro.media.xml_variant.profiles=_cliffs_v0
 vendor.mm.target.enable.qcom_parser=524304
 vendor.media.target_variant=_cliffs_v0

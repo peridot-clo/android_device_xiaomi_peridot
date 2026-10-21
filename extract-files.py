@@ -26,7 +26,6 @@ namespace_imports = [
     'vendor/qcom/common/vendor/perf',
     'vendor/qcom/common/vendor/adreno/u',
     'vendor/qcom/common/vendor/display/6.1',
-    'vendor/qcom/common/vendor/media/6.1',
 ]
 
 def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
@@ -378,8 +377,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libqms_client.so',
     ): blob_fixup()
         .add_needed('libbinder_shim.so'),
-    'vendor/lib64/libqcodec2_core.so': blob_fixup()
-        .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
